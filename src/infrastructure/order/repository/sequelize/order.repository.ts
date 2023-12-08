@@ -62,8 +62,6 @@ export default class OrderRepository implements OrderRepositoryInterface {
       throw new Error('Order not found')
     }
 
-    console.log(orderModel.toJSON())
-
     const orderItems = orderModel.items.map((item) => {
       const orderItem = new OrderItem(
         item.id,
